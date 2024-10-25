@@ -4,10 +4,12 @@ function onBallClick() {
     const ball = document.querySelector(".ball")
 
     var currentWidth = parseInt(ball.style.width) || 100
-
     var newDiameter = currentWidth + 50
+    if (newDiameter > 400) {
+        newDiameter = 100
+    }
+
     ball.style.width = newDiameter + "px"
     ball.style.height = newDiameter + "px"
-
     ball.textContent = newDiameter + "px"
 }
