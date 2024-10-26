@@ -1,15 +1,44 @@
 'use strict'
 
 function onBallClick(ball, maxDiameter) {
-    var currentWidth = parseInt(ball.style.width) || 100
-    var newDiameter = currentWidth + getRandomInt(20, 60)
+    if (ball.classList.contains('ball3')) {
+        swapBalls()
+    } else {
+        var currentWidth = parseInt(ball.style.width) || 100
+        var newDiameter = currentWidth + getRandomInt(20, 60)
 
-    if (newDiameter > maxDiameter) {
-        newDiameter = 100
+        if (newDiameter > maxDiameter) {
+            newDiameter = 100
+        }
+
+        ball.style.width = newDiameter + "px"
+        ball.style.height = newDiameter + "px"
+        ball.textContent = newDiameter + "px"
+        ball.style.backgroundColor = getRandomColor()
     }
+}
 
-    ball.style.width = newDiameter + "px"
-    ball.style.height = newDiameter + "px"
-    ball.textContent = newDiameter + "px"
-    ball.style.backgroundColor = getRandomColor()
+function swapBalls() {
+    const ball1 = document.querySelector('.ball1')
+    const ball2 = document.querySelector('.ball2')
+
+    //Get current sizes and colors
+    const ball1Size = ball1.style.width
+    const ball1Color = ball1.style.backgroundColor
+    const ball2Size = ball2.style.width
+    const ball2Color = ball2.style.backgroundColor
+
+    //Swap sizes
+    ball1.style.width = ball2Size
+    ball1.style.height = ball2Size
+    ball2.style.width = ball1Size
+    ball2.style.height = ball1Size
+
+    //Swap colors
+    ball1.style.backgroundColor = ball2Color
+    ball2.style.backgroundColor = ball1Color
+
+    //Update text content to show new sizes
+    ball1.textContent = ball2Size || "100px"
+    ball2.textContent = ball1Size || "100px"
 }

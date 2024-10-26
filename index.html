@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>The Ball Game</h1>
-    <div class="ball" onclick="onBallClick(this, 300)">100</div>
-    <div class="ball2" onclick="onBallClick(this, 400)">100</div>
-
-
+    
+    <div class="container">
+      <div class="ball1" onclick="onBallClick(this, 300)">100</div>
+      <div class="ball2" onclick="onBallClick(this, 400)">100</div>
+      <div class="ball3" onclick="onBallClick(this)">Swap</div>
+    </div>
 
     <script src="util.js"></script>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>

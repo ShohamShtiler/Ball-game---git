@@ -11,21 +11,34 @@ h1 {
     text-align: center;
 }
 
-.ball, .ball2 {
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:20px;
+}
+
+.ball1, .ball2, .ball3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    margin: 0 auto;
 
-    
     font-size: 22px;
     font-weight: bold;
-    text-align: center;
-    background-color: blueviolet;
+    background-color: #F38181;
 
     transition: width 1s, height 1s;
 }
 
 .ball2 {
-    background-color: rgb(160, 101, 216);
+    background-color: #FCE38A;
+}
+
+.ball3 {
+    background-color: #EAFFD0;
 }
