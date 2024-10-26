@@ -1,5 +1,10 @@
 'use strict'
 
+const orignialState = {
+    ball1: { size: 100, color: "#F38181" },
+    ball2: { size: 100, color: "#FCE38A" },
+}
+
 function onBallClick(ball, maxDiameter) {
     if (ball.classList.contains('ball4')) {
         reduceDiameters()
@@ -76,4 +81,21 @@ function reduceDiameters() {
 
 function changeBackgroundColor() {
     document.body.style.backgroundColor = getRandomColor()
+}
+
+function resetGame() {
+    const ball1 = document.querySelector('.ball1')
+    const ball2 = document.querySelector('.ball2')
+
+    ball1.style.width = orignialState.ball1.size + "px"
+    ball1.style.height = orignialState.ball1.size + "px"
+    ball1.style.backgroundColor = orignialState.ball1.color
+    ball1.textContent = orignialState.ball1.size + "px"
+
+    ball2.style.width = orignialState.ball2.size + "px"
+    ball2.style.height = orignialState.ball2.size + "px"
+    ball2.style.backgroundColor = orignialState.ball2.color
+    ball2.textContent = orignialState.ball2.size + "px"
+
+    document.body.style.backgroundColor = "black"
 }
