@@ -20,7 +20,7 @@ h1 {
     gap:20px;
 }
 
-.ball1, .ball2, .ball3, .ball4 {
+.ball1, .ball2, .ball3, .ball4, .ball5 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +33,7 @@ h1 {
     font-weight: bold;
     background-color: #F38181;
 
-    transition: width 1s, height 1s;
+    transition: width 1s, height 1s, background-color 0.5s;
 }
 
 .ball1{
@@ -50,4 +50,12 @@ h1 {
 
 .ball4 {
     background-color: #95E1D3;
+}
+
+.ball5 {
+    width: 120px;
+    height: 120px; 
+    font-size: 20px;
+    text-align: center;
+    background-color: #B7E0FF;
 }

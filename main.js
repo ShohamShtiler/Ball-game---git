@@ -5,6 +5,8 @@ function onBallClick(ball, maxDiameter) {
         reduceDiameters()
     } else if (ball.classList.contains('ball3')) {
         swapBalls()
+    } else if (ball.classList.contains(".ball5")) {
+        changeBackgroundColor()
     } else {
         var currentWidth = parseInt(ball.style.width) || 100
         var newDiameter = currentWidth + getRandomInt(20, 60)
@@ -70,4 +72,8 @@ function reduceDiameters() {
     ball2.textContent = newWidth2 + "px"
 
 
+}
+
+function changeBackgroundColor() {
+    document.body.style.backgroundColor = getRandomColor()
 }
