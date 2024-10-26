@@ -1,12 +1,10 @@
 'use strict'
 
-function onBallClick() {
-    const ball = document.querySelector(".ball")
-    
+function onBallClick(ball, maxDiameter) {
     var currentWidth = parseInt(ball.style.width) || 100
     var newDiameter = currentWidth + getRandomInt(20, 60)
-    
-    if (newDiameter > 400) {
+
+    if (newDiameter > maxDiameter) {
         newDiameter = 100
     }
 
