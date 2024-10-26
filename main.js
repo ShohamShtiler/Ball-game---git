@@ -4,7 +4,7 @@ function onBallClick() {
     const ball = document.querySelector(".ball")
 
     var currentWidth = parseInt(ball.style.width) || 100
-    var newDiameter = currentWidth + 50
+    var newDiameter = currentWidth + getRandomInt(20, 60)
     if (newDiameter > 400) {
         newDiameter = 100
     }
