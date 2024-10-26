@@ -7,6 +7,7 @@ body {
 }
 
 h1 {
+    font-size: 50px;
     color: white;
     text-align: center;
 }
@@ -19,7 +20,7 @@ h1 {
     gap:20px;
 }
 
-.ball1, .ball2, .ball3 {
+.ball1, .ball2, .ball3, .ball4 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,10 +36,18 @@ h1 {
     transition: width 1s, height 1s;
 }
 
+.ball1{
+    margin-top: 5vh;
+}
+
 .ball2 {
     background-color: #FCE38A;
 }
 
 .ball3 {
     background-color: #EAFFD0;
+}
+
+.ball4 {
+    background-color: #95E1D3;
 }
