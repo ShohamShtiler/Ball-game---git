@@ -20,7 +20,7 @@ h1 {
     gap:20px;
 }
 
-.ball1, .ball2, .ball3, .ball4, .ball5 {
+.ball1, .ball2, .ball3, .ball4, .ball5, .ball6{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,8 +32,9 @@ h1 {
     font-size: 22px;
     font-weight: bold;
     background-color: #F38181;
-
-    transition: width 1s, height 1s, background-color 0.5s;
+    cursor: pointer;
+    
+    transition: width 1s, height 1s;
 }
 
 .ball1{
@@ -57,5 +58,11 @@ h1 {
     height: 120px; 
     font-size: 20px;
     text-align: center;
-    background-color: #B7E0FF;
+    background-color: #FFBD73;
+}
+
+.ball6 {
+    text-align: center;
+    background-color:#00FF9C;
+    border: solid 2px white;
 }
